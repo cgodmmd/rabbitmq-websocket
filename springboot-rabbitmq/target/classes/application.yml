@@ -1,0 +1,20 @@
+# 运行端口
+server:
+  port: 8666
+spring:
+  thymeleaf:
+    prefix: classpath:/templates/
+    mvc:
+      static-path-pattern: /**
+    resources:
+      static-locations: classpath:/templates
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    listener:
+      direct:
+        acknowledge-mode: manual
+      simple:
+        acknowledge-mode: manual
